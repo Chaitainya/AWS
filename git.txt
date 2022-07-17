@@ -9,3 +9,5 @@ sudo yum -y install git // If not to install git, need to use this command
 check the folder once again,
 /var/www/html/
 to clone the repo ->  sudo git clone <repo link> /var/www/html/
+
+          eg: sudo git clone https://github.com/Chaitainya/AWS.git /var/www/html/
