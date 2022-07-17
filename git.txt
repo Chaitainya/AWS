@@ -1,0 +1,6 @@
+How to get code from github to server?
+
+* We need a software called git client.
+
+sudo rpm -qa | grep git // to check wheather it is already installed or not
+sudo yum -y install git // If not to install git, need to use this command
