@@ -4,3 +4,8 @@ How to get code from github to server?
 
 sudo rpm -qa | grep git // to check wheather it is already installed or not
 sudo yum -y install git // If not to install git, need to use this command
+
+
+check the folder once again,
+/var/www/html/
+to clone the repo ->  sudo git clone <repo link>
