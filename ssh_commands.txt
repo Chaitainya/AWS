@@ -1,0 +1,27 @@
+To install Apache web server in an virtual instace using SSH:::::::::::
+
+
+sudo rpm -qa  --> This will go ahead and see what and all installed applications on the server.
+
+sudo rpm -qa | grep httpd  --> If we want to know if the httpd is installed or not.
+
+-----> Here the search is 'grep'
+
+sudo systemctl status httpd  --> is also another way to check whether the httpd is installed or not.
+
+sudo netstat -ntpl | grep 80  --> is also another way to check whether the httpd is installed or not.
+
+
+Now, to install any software,
+
+sudo yum -y install <software>
+      eg: "sudo yum -y install httpd"
+
+Now, we install so we need to start it.
+
+sudo systemctl status httpd
+sudo systemctl start httpd
+sudo systemctl enable httpd
+sudo systemctl status httpd
+
+Now we need to add files in /var/www/html/
