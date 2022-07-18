@@ -1,5 +1,17 @@
 Jenkins installation on LINUX SERVER::::::
 
+PROCEDURE:
+1. Download REPO
+2. Download KEY
+3. Download Java stable version
+4. Install GIT
+5. Install JENKINS
+6. Install MAVEN
+7. Intell EPEL(Extra Packages for Enterprise Linux)
+8. Restart
+9. Status
+10. Public IP with 8080
+
 sudo wget -O /etc/yum.repos.d/jenkins.repo \ https://pkg.jenkins.io/redhat-stable/jenkins.repo
 sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
 
@@ -16,4 +28,8 @@ sudo systemctl status jenkins
 
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
+::: MY JENKIN DETAILS :::
 http://43.204.147.10:8080/
+chaitanya
+chai@123
+:::::::::::::::::::::::::
