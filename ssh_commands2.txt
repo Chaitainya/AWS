@@ -8,3 +8,5 @@ sudo systemctl start apache2
 sudo systemctl enable apache2
 
 sudo systemctl status apache2
+
+Note:::: In ubuntu server we no need to install git. GIT is already been installed in ubuntu server.
