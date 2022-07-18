@@ -19,6 +19,8 @@ sudo yum upgrade
 
 sudo amazon-linux-extras install java-openjdk11
 
+sudo yum intall git -y
+
 sudo yum install jenkins
 
 NOW, start the jenkins::::
