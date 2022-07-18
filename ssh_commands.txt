@@ -1,4 +1,4 @@
-To install Apache web server in an virtual instace using SSH:::::::::::
+To install Apache web server in an virtual instace (LINUX SERVER) using SSH:::::::::::
 
 
 sudo rpm -qa  --> This will go ahead and see what and all installed applications on the server.
