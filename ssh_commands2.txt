@@ -1,3 +1,10 @@
 To install Apache web server in an virtual instace (UBUNTU SERVER) using SSH:::::::::::
 
 sudo apt -y install apache2 to install
+
+sudo systemctl status apache2
+
+sudo systemctl start apache2
+sudo systemctl enable apache2
+
+sudo systemctl status apache2
