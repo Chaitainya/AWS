@@ -1,0 +1,18 @@
+sudo git clone https://github.com/Chaitainya/AWS.git /var/www/html/
+
+If we try to clone the git repo in Ubuntu server, it will throw an error like the folder is not empty.
+
+Use this command to check what exists in the folder : ls /var/www/html/
+
+There we can find "index.html"
+
+Now we need to remove that file the clone our repo
+
+To remove the file use this command : sudo rm /var/www/html/index.html
+
+Then try this again : ls /var/www/html/
+Now the folder is empty.
+
+Again, try to clone the repo:   sudo git clone https://github.com/Chaitainya/AWS.git /var/www/html/
+
+There you are.... done.
