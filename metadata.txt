@@ -1,3 +1,20 @@
 Meta data retrieving, use the below command.
 
-curl http://169.254.169.254/latest/meta-data/ami-id
+curl http://169.254.169.254/latest/meta-data/
+
+Condition::::
+
+var_os = `curl http://169.254.169.254/latest/meta-data/ami-id`
+if[$var_os == "paste the relevant ami-id here"]
+then
+sudo yum -y install httpd
+sudo systemctl start httpd
+sudo systemctl enable httpd
+sudo yum -y install git
+sudo git clone https://github.com/Chaitainya/AWS.git /var/www/html/
+else
+sudo apt -y install apache2
+sudo systemctl start apache2
+sudo systemctl enable apache2
+sudo rm /var/www/html/index.html
+sudo git clone https://github.com/Chaitainya/AWS.git /var/www/html/
