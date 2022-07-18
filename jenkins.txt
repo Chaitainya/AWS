@@ -15,3 +15,5 @@ sudo systemctl start jenkins
 sudo systemctl status jenkins
 
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
+http://43.204.147.10:8080/
