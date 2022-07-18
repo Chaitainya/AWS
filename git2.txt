@@ -1,3 +1,5 @@
+::::UBUNTU SERVER::::
+
 sudo git clone https://github.com/Chaitainya/AWS.git /var/www/html/
 
 If we try to clone the git repo in Ubuntu server, it will throw an error like the folder is not empty.
