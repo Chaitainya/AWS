@@ -1,10 +1,10 @@
 Meta data retrieving, use the below command.
 
-curl http://169.254.169.254/latest/meta-data/
+curl -s http://169.254.169.254/latest/meta-data/
 
 Condition::::
 
-var_os = `curl http://169.254.169.254/latest/meta-data/ami-id`
+var_os = `curl -s http://169.254.169.254/latest/meta-data/ami-id`
 if[$var_os == "paste the relevant ami-id here"]
 then
 sudo yum -y install httpd
