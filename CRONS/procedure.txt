@@ -1,0 +1,28 @@
+How to run crons:
+
+1. Create a bash file in /home/ubuntu/crons/
+
+eg: calculatecampuscomparativeanalytics1.sh
+----
+!#/bin/bash
+echo "----Start Cron-----"
+echo
+date
+curl -silent https://qa.zomant.com/rest/student/v1/calculatecampuscomparativeanalytics1
+echo
+echo "-----end cron------"
+----
+
+2. give executable permission
+command: chmod 755 calculatecampuscomparativeanalytics1.sh (or) chmod 755 /home/ubuntu/crons/calculatecampuscomparativeanalytics1.sh
+
+3. Enable cron
+command: crontab -e
+* * * * * /home/ubuntu/crons/calculatecampuscomparativeanalytics1.sh >> /home/ubuntu/crons/logs/calculatecampuscomparativeanalytics1.log
+
+4. We can get logs under /home/ubuntu/crons/logs/
+
+
+
+__How to change the time zone in the linux servers___
+command: sudo timedatectl set-timezone Asia/Kolkata
