@@ -1,3 +1,5 @@
+If you install http or apache2 then you can follow the below steps. Or install sudo apt-get install cron and check the status by sudo systemctl status cron.
+
 How to run crons:
 
 Go to directory /home/ubuntu/
