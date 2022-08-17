@@ -1,0 +1,4 @@
+
+This will monitor the cpu and list it out: top -b -d 1|grep Cpu
+
+This will give you the exact cpu usage value: top -b -d1 -n1|grep -i "Cpu(s)"|head -c21|cut -d ' ' -f3|cut -d '%' -f1
