@@ -1,0 +1,11 @@
+Laptop --> Server
+scp -i chai.pem fdgapp-1.0-SNAPSHOT.war ubuntu@3.7.252.60:~
+
+Server --> Server
+Whenever we transfer the files between servers we use private ips
+We need to send the pem file to the sender
+chmod 400 file.pem  -> 400 means readonly permissions
+scp -i chai.pem fdgapp-1.0-SNAPSHOT.war ubuntu@172.31.14.31:~
+
+Server --> Laptop
+----------------- Aug 2nd video in Devops
