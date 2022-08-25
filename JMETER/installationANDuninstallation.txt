@@ -1,0 +1,14 @@
+https://jmeter.apache.org/download_jmeter.cgi
+https://jmeter.apache.org/usermanual/get-started.html
+
+https://archive.apache.org/dist/jmeter/binaries/
+
+https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-5.3.zip
+
+Youtube: https://www.youtube.com/watch?v=LNeS0ojwYYU
+
+Jmeter Uninstallation:
+sudo apt-get remove jmeter
+sudo apt-get -y autoremove jmeter
+sudo apt-get -y purge jmeter
+sudo apt-get -y autoremove --purge jmeter
