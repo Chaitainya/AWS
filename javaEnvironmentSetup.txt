@@ -1,0 +1,17 @@
+sudo apt-get update
+sudo apt-get install default-jdk
+sudo apt-get install maven
+sudo apt-get install git
+
+-> Create a project
+mvn archetype:generate -DgroupId=com.mycompany.app -DartifactId=my-app -DarchetypeArtifactId=maven-archetype-quickstart -DarchetypeVersion=1.4 -DinteractiveMode=false
+
+-> Build the project
+mvn package
+
+ls
+cd target
+java -cp my-app-1.0-SNAPSHOT.jar com.mycompany.app.App
+Hello World!
+
+guide: https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html

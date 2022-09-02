@@ -1,0 +1,2 @@
+0 09 ? * MON-SAT *   Monday to saturday 09:00AM
+0 21 ? * MON-SAT *   Monday to saturday 09:00PM
