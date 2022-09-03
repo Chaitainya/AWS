@@ -1,5 +1,6 @@
 Laptop --> Server
 scp -i chai.pem fdgapp-1.0-SNAPSHOT.war ubuntu@3.7.252.60:~
+scp -i "test.pem" hellowindows.txt ec2-user@15.206.174.16:~/
 
 Server --> Server
 Whenever we transfer the files between servers we use private ips
