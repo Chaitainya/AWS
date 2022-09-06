@@ -1,0 +1,26 @@
+-> login to qa-db server
+-> run command mysql -u admin -p
+-> it will ask the password, enter admin123
+-> use ebdb
+-> exit
+---- basics ended -----
+
+---- taking backup ----
+-> create a folder called backups
+-> cd backups
+-> mysqldump -u admin -p ebdb > ebdb060922.sql
+-> it wll ask password enter admin123 and hit enter
+-> ls
+-> tan tadandan backup done.
+---- taking backup ----
+
+---- restoring database ----
+-> mysql -u admin -p
+-> it will ask password enter admin123 and hit enter
+-> create database using create database ebdb;
+-> use ebdb;
+-> show table ---> empty
+-> exit;
+-> mysql -u admin -p ebdb < ebdb060922.sql
+-> it will ask password enter the admin123 and hit enter done.
+-> hooray restoring done.
