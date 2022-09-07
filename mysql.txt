@@ -24,3 +24,55 @@
 -> mysql -u admin -p ebdb < ebdb060922.sql
 -> it will ask password enter the admin123 and hit enter done.
 -> hooray restoring done.
+
+
+old_code:
+#!/bin/bash
+datee=$(date +"%d-%m-%y")
+timee=$(date "+%H-%M-%S")
+echo
+echo
+echo "---------- Backup started -----------"
+echo
+echo "---- Date: $datee"
+echo "---- Time: $timee"
+echo
+echo "---------------------------------------------------------------------------- copying"
+mysqldump -u admin -padmin123 ebdb > ebdb_$timee-$datee.sql
+echo
+echo "---------- Backup Successful ----------"
+echo
+echo "---- Uploading int s3 bucket ----------------------------"
+aws s3 cp ebdb_$timee-$datee.sql s3://skygetqadbbackups
+echo "---- Uploaded to s3 bucket Bucket: skygetqadbbackups ----"
+echo
+echo
+
+new_code:
+#!/bin/bash
+datetime=$(date +%Y-%m-%d-%H-%M-%S)
+echo "Process started"
+echo
+echo "Backup started"
+echo
+echo "Dumping data"
+mysqldump -u admin -padmin123 ebdb > /home/ubuntu/ebdb_cron_backups/backup-$datetime.sql
+echo "Data dumped"
+echo
+echo "Backup completed"
+echo
+echo "Zipping"
+zip /home/ubuntu/ebdb_cron_backups/backup-$datetime.zip /home/ubuntu/ebdb_cron_backups/backup-$datetime.sql
+echo "Zipped"
+echo
+echo "Removing the raw file"
+sudo rm /home/ubuntu/ebdb_cron_backups/backup-$datetime.sql
+echo "Removed"
+echo
+echo "Uploading to S3 bucket"
+aws s3 mv /home/ubuntu/ebdb_cron_backups/backup-$datetime.zip s3://skygetqadbbackups
+echo "Uploaded"
+echo
+echo "Process completed"
+
+
