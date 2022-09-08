@@ -75,4 +75,26 @@ echo "Uploaded"
 echo
 echo "Process completed"
 
+# Praveen optimization:
+#!/bin/bash
+datetime=$(date +%Y-%m-%d-%H-%M-%S)
 
+echo "[$datetime] Backup cron started"
+
+echo "----------------------------"
+
+echo "[$datetime] Database dumping started ... "
+
+mysqldump -u admin -padmin123 ebdb | gzip > /home/ubuntu/ebdb_cron_backups/backup-$datetime.gz
+
+echo "[$(date +%Y-%m-%d-%H-%M-%S)] Database dumping  completed ..."
+
+echo "[$(date +%Y-%m-%d-%H-%M-%S)] Started Uploading to S3 bucket"
+
+sudo aws s3 mv /home/ubuntu/ebdb_cron_backups/backup-$datetime.gz s3://skygetqadbbackups/
+
+echo "[$(date +%Y-%m-%d-%H-%M-%S)] Backup Uploaded successfully to s3 bucket..."
+
+
+# For jenkins
+# mysqldump -h 172.16.25.126 -u root -ptecmint gallery > gallery.sql
