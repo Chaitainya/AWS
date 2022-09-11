@@ -1,0 +1,7 @@
+How to build maven project by connecting through ssh using jenkins?
+
+1. Manage jenkins -> Manage Plugins -> Available -> SSH plugin(This plugin executes shell commands remotely using SSH protocol.)
+
+2. Manage jenkins -> Manage Credentials -> Jenkins -> Global credentials (unrestricted) -> Add credentials
+
+3. Create a job -> Build Steps -> Execute shell script on remote host using ssh -> Save -> Build
