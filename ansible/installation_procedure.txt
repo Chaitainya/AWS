@@ -1,0 +1,52 @@
+Ansible installation:
+
+Ansible is present in a package called as epel-release
+To install epel-release:
+sudo yum -y install epel-release -- centos
+sudo amazon-linux-extras install epel -- linux
+
+After the epel repo installation now install ansible.
+sudo yum -y install ansible -- this will pickup the ansible from the epel repo
+
+command to list all the hosts: ansible --list-hosts all
+command to list the particular group: ansible --list-hosts webservers
+
+if there are no hosts, you'd see something like this,
+[WARNING]: provided hosts list is empty, only localhost is available. Note that
+the implicit localhost does not match 'all'
+  hosts (0):
+
+--- zero hosts, reason: inventory file was never updated
+Inventory location: /etc/ansible/hosts
+sudo vi /etc/ansible/hosts
+n1 ansible_host=172.31.12.45 ansible_user=centos ansible_ssh_private_key_file=/home/centos/chai.pem
+ansible --list-hosts all
+now, you can see,
+  hosts (1):
+    n1
+
+Same way add multiple nodes
+
+n2 ansible_host=172.39.12.44 ansible_user=centos ansible_ssh_private_key_file=/home/centos/chai.pem
+n3 ansible_host=172.31.12.45 ansible_user=centos ansible_ssh_private_key_file=/home/centos/chai.pem
+
+save the file and check ansible --list-hosts all
+
+now, you can see,
+  hosts (1):
+    n1
+    n2
+    n3
+
+to create ag group go to the inventory sudo vi etc/ansible/hosts
+
+add [group name] on top of the nodes and save
+
+now check, ansible --list-hosts all
+now we can see like this,
+  hosts (3):
+    n1
+    n2
+    n3
+
+
