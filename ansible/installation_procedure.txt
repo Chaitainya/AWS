@@ -49,4 +49,4 @@ now we can see like this,
     n2
     n3
 
-
+anisible n1 or n2 or group1 -m path -a "path=/home/ec2-user/helloworld.html state=directory"
