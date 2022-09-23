@@ -1,0 +1,1 @@
+ scp -i "chai.pem" -r setup/ ec2-user@13.234.162.233:~/
