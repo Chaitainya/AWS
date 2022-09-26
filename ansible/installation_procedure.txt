@@ -15,6 +15,18 @@ if there are no hosts, you'd see something like this,
 [WARNING]: provided hosts list is empty, only localhost is available. Note that
 the implicit localhost does not match 'all'
   hosts (0):
+  
+  
+if([WARNING]: No inventory was parsed, only implicit localhost is available
+   [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'){
+   
+    sudo mkdir /etc/ansible/
+    sudo touch /etc/ansible/hosts
+    sudo chmod 777 /etc/ansible/hosts
+    sudo echo "localhost ansible_connection=local" >> /etc/ansible/hosts
+    
+}
+ansible --list-hosts all
 
 --- zero hosts, reason: inventory file was never updated
 Inventory location: /etc/ansible/hosts
