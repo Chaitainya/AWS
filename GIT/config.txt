@@ -1,4 +1,8 @@
 git config --global user.name Chaitainya
 git config --global user.email chaitainyaa@gmail.com
 
-git config --global color.ui true (by default it is disabled, so we need to enable it by mentioning true)
+git config --global color.ui true (By default it is disabled, so we need to enable it by mentioning true)
+
+git log --oneline (To see all commits)
+
+git show 03e9fb7 (To see the particular commit by it's commit id)
