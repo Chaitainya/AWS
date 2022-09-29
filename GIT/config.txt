@@ -9,3 +9,5 @@ git show 03e9fb7 (To see the particular commit by it's commit id)
 
 username: Chaitanya
 password: token
+
+To know which branch we're in "git branch"
