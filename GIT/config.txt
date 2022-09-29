@@ -18,3 +18,13 @@ git pull --all (To pull all the branches)
 git checkout <branch-name> (this will change the branch)
 
 git branch -a (To list all the branches)
+
+git branch
+--main
+git merge <branch-name>
+
+git diff main..<branch-name> (This will show you the difference between the main branch and another branch)
+
+git push --all (This command will push the changes in all the branches)
+
+$ git push origin --delete fortesting (this will delete the branch both locally and at origin too)
