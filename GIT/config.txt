@@ -11,3 +11,6 @@ username: Chaitanya
 password: token
 
 To know which branch we're in "git branch"
+
+git pull (This will only pull the current branch or by default main branch)
+git pull --all (To pull all the branches)
