@@ -16,3 +16,5 @@ git pull (This will only pull the current branch or by default main branch)
 git pull --all (To pull all the branches)
 
 git checkout <branch-name> (this will change the branch)
+
+git branch -a (To list all the branches)
