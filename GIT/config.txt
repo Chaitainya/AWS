@@ -6,3 +6,6 @@ git config --global color.ui true (By default it is disabled, so we need to enab
 git log --oneline (To see all commits)
 
 git show 03e9fb7 (To see the particular commit by it's commit id)
+
+username: Chaitanya
+password: token
