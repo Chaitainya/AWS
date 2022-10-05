@@ -1,0 +1,2 @@
+set dateTime=%Date:~3,2%-%Date:~0,2%-%Date:~6,4%_%time:~0,2%-%time:~3,2%-%time:~6,2%
+aws s3 cp fdgapp-1.0-SNAPSHOT.war s3://warfile-versions/version_%dateTime%/fdgapp-1.0-SNAPSHOT.war
