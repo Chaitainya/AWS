@@ -1,0 +1,34 @@
+DATE:
+
+set Day=%Date:~3,2%    ---------- Day
+
+set Mth=%Date:~0,2%    ---------- Month
+
+set Yr=%Date:~6,4%     ---------- Year
+
+TIME:
+
+set Hrs=%time:~0,2%    ---------- Hours
+
+set Min=%time:~3,2%    ---------- Minutes
+
+set Sec=%time:~6,2%    ---------- Seconds
+
+ALL Together:
+
+set Day=%Date:~3,2%
+set Mth=%Date:~0,2%
+set Yr=%Date:~6,4%
+set Hrs=%time:~0,2%
+set Min=%time:~3,2%
+set Sec=%time:~6,2%
+
+OUTPUT:
+echo %Day%-%Mth%-%Yr%_%Hrs%-%Min%-%Sec%
+
+Shorthand:
+
+set DateTime=%Date:~3,2%-%Date:~0,2%-%Date:~6,4%_%time:~0,2%-%time:~3,2%-%time:~6,2%
+
+OUTPUT:
+echo %DateTime%
