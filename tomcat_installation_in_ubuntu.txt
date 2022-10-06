@@ -1,1 +1,32 @@
-https://www.vultr.com/docs/install-apache-tomcat-on-ubuntu-20-04-39123/?utm_source=performance-max-apac&utm_medium=paidmedia&obility_id=16876059738&utm_adgroup=&utm_campaign=&utm_term=&utm_content=&gclid=Cj0KCQjwsrWZBhC4ARIsAGGUJur5ORGuLg0bIB8UdkCJAcTE7NHq_-j1r8BOivy5wTT6RYd5tIiI3a0aAryBEALw_wcB
+How to install tomcat in ubuntu.....
+
+As Tomcat runs the Java code, so you have set up JDK (Java Development Kit) in your distribution first proceeding to the Tomcat installation.
+To install JDK, execute the given command.
+--> sudo apt-get install default-jdk
+--> java -version
+
+In order to install Tomcat, you need to get the tomcat.tar file from its official website: https://tomcat.apache.org/download-90.cgi (tar.gz (pgp, sha512))
+--> wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.67/bin/apache-tomcat-9.0.67.tar.gz
+After downloading the tomcat bundle file, you need to extract it.
+--> tar -xvzf apache-tomcat-9.0.67.tar.gz
+
+Now create a /tomcat directory in the /opt/ folder and move all the files from the extracted folder to the newly created folder.
+--> sudo mkdir /opt/tomcat
+--> sudo mv apache-tomcat-9.0.67/* /opt/tomcat/
+
+--> ls /opt/tomcat/
+
+In order to manage the Tomcat server, you need to create an admin and manager user. For this open the tomcat-users.xml file and add the user details.
+This file can be found in the /conf folder.
+--> sudo nano /opt/tomcat/conf/tomcat-users.xml
+    	and paste the below lines,
+	<role rolename="manager-gui"/>
+	<user username="manager" password="anyPassword" roles="manager-gui"/>
+
+	<role rolename="admin-gui"/>
+	<user username="admin" password="anyPassword" roles="admin-gui, manager-gui"/>
+
+Finally, you can start the server, for this navigate to the bin folder and execute the startup script.
+--> cd /opt/tomcat/bin/ && ./startup.sh
+
+--> ./shutdown.sh
