@@ -1,11 +1,1 @@
-3. Update your package lists
---> sudo apt-get update
-
-4. Install Certbot and additional required packages
---> sudo apt-get install python-certbot-apache
-
-5. After you install certbot, you are ready to create SSL certificates for your domain(s)
-sudo certbot --apache -d domain.com 
-(OR) if you wish to create an SSL that includes "WWW" queries
-sudo certbot --apache -d domain.com -d www.domain.com
-sudo certbot --apache -d saydashamer.com -d www.saydashamer.com
+https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-20-04
