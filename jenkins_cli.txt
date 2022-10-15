@@ -1,0 +1,5 @@
+ssh -l username -p portnumber ipaddress build 'jobname'
+ssh -l username -p portnumber ipaddress build 'foldername/jobname'
+
+ssh -l username -p portnumber ipaddress build 'jobname' -c
+ssh -l username -p portnumber ipaddress build 'jobname' -s -v -p key=value
