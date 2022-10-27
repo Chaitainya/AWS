@@ -1,0 +1,12 @@
+
+#!/bin/bash
+listOfFiles=$(ls)
+tempvar=($listOfFiles)
+for i in "${tempvar[@]}"
+do
+  echo $i
+  echo
+  du -hs $i
+done
+
+# The above code is written by me
