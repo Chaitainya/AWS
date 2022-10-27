@@ -1,0 +1,4 @@
+What is general logs in MySQL?
+  The general query log is a general record of what mysqld is doing.
+  The server writes information to this log when clients connect or disconnect,
+  and it logs each SQL statement received from clients.
