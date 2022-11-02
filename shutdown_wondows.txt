@@ -1,1 +1,3 @@
 shutdown -s
+
+shutdown /r
