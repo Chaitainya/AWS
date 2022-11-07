@@ -1,0 +1,6 @@
+useradd <user name>
+passwd <user name>
+New password: <Enter the new password"
+Retype the password: <Reenter the password"
+
+"Password updated successfully"
