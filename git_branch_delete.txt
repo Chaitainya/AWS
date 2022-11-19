@@ -1,0 +1,6 @@
+Go to "Team > Remote > Push…"
+from the menu. Select your repository, and click "Next".
+Under "Remote ref to delete…"
+select your branch and click "Add spec".
+Then click "Finish".
+This should delete the remote branch.
