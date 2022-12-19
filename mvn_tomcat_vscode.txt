@@ -15,4 +15,24 @@ Under JAVA Projects > Open Project > On Maven Dependencies click on add icon > t
 
 Under JAVA Projects > Right click on the project > on maven > run maven commands
 
+add this plugin
+<plugin>
+   <groupId>org.apache.tomcat.maven</groupId>
+   <artifactId>tomcat7-maven-plugin</artifactId>
+   <version>2.2</version>
+   <!-- <type>maven-plugin</type> -->
+   <configuration>
+      <server>Tomcat</server>
+      <port>9090</port>
+   </configuration>
+</plugin>
+
+<dependency>
+  <groupId>org.apache.tomcat.maven</groupId>
+  <artifactId>tomcat7-maven-plugin</artifactId>
+  <version>2.2</version>
+  <type>maven-plugin</type>
+</dependency>
+and remove the dependency
+
 After the compilation > on command prompt type "mvn tomcat7:run"
