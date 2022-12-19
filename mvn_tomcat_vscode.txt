@@ -1,0 +1,18 @@
+Install Extension Pack for Java
+
+click on view and select commant palette ctrl + shift + p
+
+search for maven
+
+select Maven: Create Maven Project
+select maven-archetype-webapp
+select the version
+select groupid
+select artifactid
+choose location
+
+Under JAVA Projects > Open Project > On Maven Dependencies click on add icon > type org.apache-tomcat.maven and hit enter
+
+Under JAVA Projects > Right click on the project > on maven > run maven commands
+
+After the compilation > on command prompt type "mvn tomcat7:run"
