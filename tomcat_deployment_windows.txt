@@ -1,0 +1,11 @@
+https://tomcat.apache.org/download-90.cgi
+
+* Core: 64-bit Windows zip (pgp, sha512)
+
+Extract the zip where to want to.
+
+Go to webapps folder and paste the war file which you want to deploy
+
+Go to bin folder and open CMD Prompt and run startup.bat
+
+There you go, Happy deployment in windows
