@@ -1,0 +1,19 @@
+How to create a fresh MAVEN project?
+
+1. Open fresh eclipse and click on > File -> New -> Maven Project (click)
+2. Choose --> Use default workspace location -> Next
+3. Search for groupId: "org.apache.maven.archetypes" and choose (double click) ArtifactId: "maven-archetype-webapp"
+
+4. GroupId eg: com.maven.javaproject, AritfactId: project name -> finish
+
+* Now we will see an error at /src/main/webapp/index.jsp (Reason::: Java Servlet API and JavaServer Pages (TM) API are not present in POM dependencies
+* You can find those dependencies at maven repository official wesite and search for "Java Servlet API" as "servlet" & "JavaServer Pages (TM) API" as "jsp"
+* Copy the both dependencies and paste them in pom.xml file and refresh the project
+* Even after all these things done, if you still able to see the error then open the index.jsp, cut everything and paste everything back and save it.
+
+6. Now we need to set the build path to jdk
+7. Right click on the project -> Run As -> Run Configuration -> 4 maven build -> type "clean install" -> Run
+8. Now, refresh the project again and now you can able to see the war file in target location.
+9. Use the WAR file to deploy
+
+//// Happy deploy
