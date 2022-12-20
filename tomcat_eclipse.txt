@@ -1,0 +1,11 @@
+How to deploy WAR file in tomcat server in eclipse
+
+1. Add a plugin in pom.xml (you can find it in official tomcat website)
+
+	<plugin>
+          <groupId>org.apache.tomcat.maven</groupId>
+          <artifactId>tomcat7-maven-plugin</artifactId>
+          <version>2.2</version>
+        </plugin>
+
+2. Right click on the project -> Run As -> Run Configurations -> Choose the project -> type tomcat7:run -> Run
