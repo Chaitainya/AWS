@@ -1,0 +1,3 @@
+Open settings -> Sytem -> Remote Desktop -> turn on
+user your system username and password for login
+allow an app through windows firewall and search for remote desktop and make it checked either private or public
