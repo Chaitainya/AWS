@@ -1,0 +1,6 @@
+How to assign static ip address to windows operating systems?
+
+Settings -> Network & Internet -> Wi-Fi -> Choose the network -> Properties -> Double click 'Internet Protocol Version 4(TCP.IPv4)' -> 'Use the following IP address' -> Ipaddress, subnet will come automatically, Default Gateway you can get it from IP config.
+
+Preferred DNS server: 8.8.8.8
+Alternate DNS server: 8.8.4.4
