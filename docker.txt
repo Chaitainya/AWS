@@ -1,0 +1,40 @@
+docker installation::
+
+go to ::: get.docker.com
+
+there you can find below line execute them one after another.
+$ curl -fsSL https://get.docker.com -o get-docker.sh
+$ sh get-docker.sh
+
+check the version whether docker is installed or not.
+check version docker --version
+
+that's it installation is done.
+
+next,
+sudo docker image ls --> this will list the images currently we have
+sudo systemctl status docker --> this will show whether the docker deamon in running or not
+sudo systemctl start docker --> this will start the docker daemon
+sudo systemctl stop docker --> this will stop the docker daemon
+
+sudo docker container ls --> this will list the containers
+
+Note: 'sudo docker container ls' --> this will show you running containers
+Note: 'sudo docker container ls -a' --> this will show you all containers
+Note: If you want to run a container, we definetly need an image.
+Note: In order to create a container: sudo docker container run <image>
+
+To start container they're two types,
+ 1. Background Mode (sudo docker container run -it ubuntu) &
+ 2. Interactive Mode (sudo docker container run -dt ubuntu) dt = detach mode or background mode
+
+In order to start a container by an image: sudo docker container run -dt ubuntu
+In order to run a command in existing container: sudo docker container exec <containerid> etc/os-release
+In order to interact with existing container: sudo docker container exec -it <containerid> bash
+
+To start a container by it's id: sudo docker container start <containerid>
+To stop a container by it's id: sudo docker container stop <containerid>
+
+To delete a container by it's id: sudo docker container rm -f <containerid>
+
+To run a live container with skyget name: sudo docker container run -dt --name skyget ubuntu
