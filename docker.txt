@@ -24,6 +24,8 @@ Note: 'sudo docker container ls -a' --> this will show you all containers
 Note: If you want to run a container, we definetly need an image.
 Note: In order to create a container: sudo docker container run <image>
 
+To download a image but not to create a container with it: sudo docker pull ubuntu
+
 To start container they're two types,
  1. Background Mode (sudo docker container run -it ubuntu) &
  2. Interactive Mode (sudo docker container run -dt ubuntu) dt = detach mode or background mode
@@ -38,3 +40,12 @@ To stop a container by it's id: sudo docker container stop <containerid>
 To delete a container by it's id: sudo docker container rm -f <containerid>
 
 To run a live container with skyget name: sudo docker container run -dt --name skyget ubuntu
+
+To get the docker container information: sudo docker container inspect skyget
+
+How to port forward to the local container: sudo docker container run -dt --name skyget -P httpd (You need to start the container like this) (-P means random port)
+
+Note: -P means random port
+Note: -p means custom port
+
+Port forwarding the custom port number: sudo docker container run -dt --name skyget-stage -p 8121:80 httpd
