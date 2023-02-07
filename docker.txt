@@ -49,3 +49,5 @@ Note: -P means random port
 Note: -p means custom port
 
 Port forwarding the custom port number: sudo docker container run -dt --name skyget-stage -p 8121:80 httpd
+
+Copy a file from local to docker container: sudo docker cp file.txt containerName:/location(full path)
