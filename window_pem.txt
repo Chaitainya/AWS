@@ -1,0 +1,8 @@
+How to give the executable permissions to pem file in windows
+
+select .pem file -> right click -> properties.
+Security > Advanced > Disable inheritance.
+Remove all Users.
+Add > Select a principal.
+In "Enter the object name to select" type your Windows username > ok.
+Give all permissions > ok > apply.
