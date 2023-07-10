@@ -1,0 +1,10 @@
+server {
+    listen 80;
+    server_name public_ip;
+
+    location / {
+        root /var/www/my-angular-app;
+        index index.html;
+        try_files $uri $uri/ /index.html;
+    }
+}
