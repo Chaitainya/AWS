@@ -1,0 +1,4 @@
+How to run multiple commands in one line:
+
+| windows
+; ubuntu
