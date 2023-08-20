@@ -1,0 +1,1 @@
+notify-send -t 3000 -i face-smile "Hello Chaitu" "All you need is self control"
